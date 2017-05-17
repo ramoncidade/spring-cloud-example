@@ -1,0 +1,25 @@
+server:
+  port: 7070
+spring:
+  application:
+    name: proxy-service
+eureka:
+  client:
+    healthcheck:
+      enabled: true
+    registerWithEureka: true
+    fetchRegistry: true
+    registryFetchIntervalSeconds: 3
+    serviceUrl:
+      defaultZone: http://127.0.0.1:9090/eureka/
+  instance:
+    preferIpAddress: true
+    leaseRenewalIntervalInSeconds: 3
+#zuul:
+#  routes:
+#    clothes-service:
+#      path: /clothes/**
+#      serviceId: clothes-service
+ribbon:
+  eureka:
+    enabled: true

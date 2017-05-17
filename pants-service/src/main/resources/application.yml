@@ -1,0 +1,22 @@
+server:
+  port: 1010
+spring:
+  application:
+    name: pants-service
+    serviceId: pants-service
+eureka:
+  client:
+    healthcheck:
+      enabled: true
+    registerWithEureka: true
+    fetchRegistry: true
+    registryFetchIntervalSeconds: 3
+    serviceUrl:
+      defaultZone: http://127.0.0.1:9090/eureka/
+  instance:
+    preferIpAddress: true
+    leaseRenewalIntervalInSeconds: 3
+    leaseExpirationDurationInSeconds: 10
+management:
+  security:
+    enabled: false

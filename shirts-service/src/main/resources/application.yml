@@ -1,0 +1,22 @@
+server:
+  port: 2020
+spring:
+  application:
+    name: shirts-service
+    serviceId: shirts-service
+eureka:
+  client:
+    healthcheck:
+      enabled: true
+    registerWithEureka: true
+    fetchRegistry: true
+    registryFetchIntervalSeconds: 3
+    serviceUrl:
+      defaultZone: http://127.0.0.1:9090/eureka/
+  instance:
+    preferIpAddress: true
+    leaseRenewalIntervalInSeconds: 3
+    leaseExpirationDurationInSeconds: 10
+management:
+  security:
+    enabled: false
