@@ -14,5 +14,5 @@ Endpoints
   - :7070 -> Proxy
     - /outfit/[casual ou formal]
     
-    Explain
-     Ao chamar o proxy ele faz a chamada para os serviços, registrados no Eureka, e monta o retorno.
+# Explain
+Ao chamar o proxy ele faz a chamada para os serviços, registrados no Eureka, e monta o retorno.
